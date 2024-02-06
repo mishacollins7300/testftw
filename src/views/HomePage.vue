@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, watch } from 'vue';
+import { defineProps } from 'vue';
 import HeaderComponent from '../components/HeaderComponent.vue';
 
 const props = defineProps({

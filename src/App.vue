@@ -7,8 +7,7 @@
 
 <script setup lang="ts">
 import { useThemeStore } from '@/store/theme';
-import { ref, onMounted } from 'vue';
-// import './style/colors.scss';
+import { ref } from 'vue';
 import HomePage from './views/HomePage.vue';
 
 const theme = useThemeStore();
@@ -18,7 +17,9 @@ theme.$subscribe((mutation, state) => {
 });
 </script>
 <style lang="scss">
-@import 'style/theme';
+body {
+  margin: 0;
+}
 #root {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
