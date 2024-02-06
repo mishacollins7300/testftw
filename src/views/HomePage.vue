@@ -1,7 +1,22 @@
 <template>
-  <div></div>
+  <div class="wrap-content">
+    <HeaderComponent />
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { defineProps, watch } from 'vue';
+import HeaderComponent from '../components/HeaderComponent.vue';
 
-<style scoped></style>
+const props = defineProps({
+  theme: String,
+});
+</script>
+
+<style scoped>
+.wrap-content {
+  width: 1120px;
+  min-width: 280px;
+  margin: 0 auto;
+}
+</style>

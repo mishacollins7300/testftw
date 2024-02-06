@@ -1,0 +1,18 @@
+#root[data-theme='light'] {
+  --background-color: #fff;
+  --text-color: #000;
+  --accent-color: #000;
+  --accent-text-color: #fff;
+  --aadit-color: rgba(0, 0, 0, 0.3);
+  --hover-color: #EDEDED;
+  --switcher: url("../assets/image/switcher-ligth.svg");
+}
+
+#root[data-theme='night'] {
+  --background-color: #000;
+  --text-color: #ffffff;
+  --accent-color: #ffffff;
+  --accent-text-color: #000;
+  --aadit-color: rgba(255, 255, 255, 0.3);
+  --hover-color: #464646;
+}
