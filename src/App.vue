@@ -1,7 +1,6 @@
 <template>
   <div id="root" v-bind:data-theme="currTheme">
     <HomePage />
-    <p>{{ currTheme }}</p>
   </div>
 </template>
 
@@ -26,5 +25,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--text-color);
+  min-height: 100vh;
 }
 </style>

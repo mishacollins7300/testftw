@@ -7,7 +7,7 @@ import { useThemeStore } from '@/store/theme';
 import { ref } from 'vue';
 
 const theme = useThemeStore();
-const icon = ref('night');
+const icon = ref(theme.getCurrentTheme === 'light' ? 'night' : 'light');
 function switchTheme() {
   theme.changeTheme(theme.getCurrentTheme === 'light' ? 'night' : 'light');
   icon.value = theme.getCurrentTheme === 'light' ? 'night' : 'light';
