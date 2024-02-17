@@ -1,15 +1,25 @@
 <template>
   <div class="wrapper">
     <HeaderComponent />
+    <GridComponent>
+      <div v-for="painting in paints" v-bind:key="painting.id">
+        <CartComponent :paint="painting" />
+      </div>
+    </GridComponent>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { ref } from 'vue';
+import { usePaintingsStore } from '@/store/paintings';
 import HeaderComponent from '../components/HeaderComponent.vue';
+import GridComponent from '../components/GridComponent.vue';
+import CartComponent from '../components/CartComponent.vue';
 
-const props = defineProps({
-  theme: String,
+const paintings = usePaintingsStore();
+const paints = ref({});
+paintings.$subscribe(() => {
+  paints.value = paintings.getAllPaintings;
 });
 </script>
 

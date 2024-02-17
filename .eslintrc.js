@@ -11,6 +11,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'no-console': 'off',
+    'class-methods-use-this': 'off',
     'import/prefer-default-export': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
